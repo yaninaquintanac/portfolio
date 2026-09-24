@@ -1,0 +1,430 @@
+## Web Technology Analysis: mntechwriter.com
+The reference site mntechwriter.com is a custom static website built using a JAMstack approach (likely using a lightweight static site generator or pure optimized HTML/CSS code) and is served via an independent hosting network.
+If your goal is to have complete design control over your content layouts, text boxes, and assets without feeling boxed in by rigid templates, you have three excellent routes depending on how much code you want to handle:
+
+   1. The Static Code Route (Maximum Control & 100% Free): This is the method you are currently using with GitHub Pages. By writing or using clean, custom HTML/CSS grids, you have raw control over every single pixel, margin, and width. There are zero platform restrictions, and it costs nothing.
+   2. WordPress with a Page Builder (High Control + UI Dashboard): If you prefer a visual dashboard to manage pages easily without touching code every time, hosting a WordPress site using an advanced page builder gives you unrestricted column control, padding adjustments, and layout structures.
+   3. Webflow (Design-First Visual Engine): Webflow gives you professional, code-level layout control (CSS grid and flexbox mechanics) inside a completely visual, drag-and-drop studio workspace.
+
+------------------------------
+## Your Re-Engineered index.html File
+I have completely redesigned your portfolio below. It implements the new strategic core headline: "Learning architecture makes adoption possible."
+To make your project cards visually striking, I have integrated custom layout containers that support featured header images right inside the cards. I have used high-quality, professional technology placeholder graphics that fit an executive technical aesthetic perfectly.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yana Quintana | Enterprise Learning Strategist & Architect</title>
+    <style>
+        /* Modern CSS Reset & Variable Tokens */
+        :root {
+            --bg-color: #f8faf9;
+            --text-main: #141916;
+            --text-muted: #525a56;
+            --accent: #1e5631;
+            --card-bg: #ffffff;
+            --container-width: 1200px;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Fluid Width Grid Layouts */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 7rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Fixed Navigation Header */
+        header {
+            background-color: rgba(248, 250, 249, 0.95);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 5rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--text-main);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-main);
+        }
+
+        /* Hero / Dynamic Headline Layout */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.75rem;
+        }
+
+        .hero-content h1 span {
+            color: var(--accent);
+            display: block;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .profile-frame {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            justify-self: center;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+        }
+
+        /* Portfolio Cards Grid with Built-In Image Support */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 3.5rem;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0,0,0,0.04);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .card-img-container {
+            width: 100%;
+            height: 240px;
+            background-color: #eaeaea;
+            overflow: hidden;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-img {
+            transform: scale(1.03);
+        }
+
+        .card-body {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .card .tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card ul {
+            list-style-type: none;
+            margin-top: auto;
+        }
+
+        .card ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            color: var(--text-main);
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* About Layout Configuration */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 5rem;
+        }
+
+        .about-text p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 1.75rem;
+        }
+
+        /* Multi-Button Contact Block */
+        .contact-wrapper {
+            max-width: 650px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1.25rem;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.25rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--text-main);
+            color: #ffffff;
+            border: 2px solid var(--text-main);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 2px solid rgba(20, 25, 22, 0.15);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-main);
+            background-color: rgba(0,0,0,0.02);
+        }
+
+        footer {
+            padding: 4rem 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-align: center;
+            border-top: 1px solid rgba(0,0,0,0.04);
+        }
+
+        /* Adaptive Mobile Breakdown Rules */
+        @media (max-width: 1024px) {
+            .hero-grid, .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3.5rem;
+            }
+            .hero-content h1 {
+                font-size: 3.25rem;
+            }
+            .profile-frame {
+                order: -1;
+                max-width: 380px;
+            }
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation Container -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#home" class="logo">Yana Quintana</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page Section -->
+    <section id="home">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Technology makes things possible. <span>Learning architecture makes adoption possible.</span></h1>
+                <p>I operate at the intersection of complex technical architecture, product strategy, and high-impact content. I bridge the gap between technical truth and market-facing execution, building structural enablement frameworks optimized to engage decision-makers who buy and scale enterprise platforms.</p>
+            </div>
+            <div class="profile-frame">
+                <img src="image_jLWqtd.png" alt="Yana Quintana Portrait" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section with Cards and Visual Elements -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Flagship Initiatives & Project Portfolios</h2>
+            <div class="expertise-grid">
+                
+                <!-- Project Card 1 -->
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="https://unsplash.com" alt="Global Developer Architecture" class="card-img">
+
+Global Developer Architecture Pilot
+Program Leadership & Content Blueprinting
+Designed, built, and launched a comprehensive university graduate onboarding program from scratch to quickly stand up technical capabilities for enterprise systems.
+
+Authored the complete blueprinting framework and program evaluation methodology.
+Wrote the core structural student manuals, including specialized units on architecture communication.
+Ran comprehensive project retrospectives to optimize future versions for scale.
+
+
+Enterprise Infrastructure Migration
+System Transition & Content Operations
+Served as the core technical lead directing the massive operational re-architecture and transition of product assets to a modern Skilljar learning infrastructure.
+
+Strategized the systematic migration tracks for more than 170 complete enterprise courses.
+Established the standardized technical playbooks, documentation criteria, and execution timelines.
+Protected delivery metrics across multiple collaborative engineering cohorts.
+
+
+Multi-Channel Product Enablement
+Feature Launch & Content Matrix
+Pioneered an integrated, multi-tier instructional deployment strategy to drive broad feature adoption for high-demand system portal launches.
+
+Fused specialized developer video series, deep-dive curriculum tracks, and automated in-app learning overlays.
+Managed and optimized developer-facing discovery networks, boosting organic technical product reach.
+Constructed the underlying content structures used to secure partner certification status.
+
+
+Technical Accreditation & Automated Guidance
+Information Architecture & UX Blueprinting
+Built scalable operational logic to automate core product education and validate specialized professional engineering credentials.
+
+Created the primary structural blueprints used to design official platform badging and evaluation matrices.
+Designed the user-flows, contextual prompts, and architectural logic for automated knowledge assistance engines.
+Built standard documentation templates used globally across product organizations.
+
+
+About Me
+
+I am an Enterprise Learning Strategist and Architect specialized in translating highly complex technical logic into usable, robust customer assets. Throughout my career, I have dedicated myself to proving that high-quality informational structure is fundamental to scalable product infrastructure.
+From establishing the functional blueprints for enterprise accreditation engines to reshaping technical distribution channels via modern content matrices, I thrive in fast-moving technology segments before industry terminologies or standards harden. I work cross-functionally alongside product, engineering, and field organizations to make modern technology platforms intuitive, reliable, and commercialized.
+
+
+Let's Connect
+Interested in robust information strategy, developer enablement, or platform onboarding programs? Get in touch to discuss building structural learning paths that scale.
+Email Me
+Connect on LinkedIn
+
+
+
+© 2026 Yana Quintana. All rights reserved.
+
+
+<FollowUp>
+Swap this code directly into your **`index.html`** file and save it! Let me know if you would like to test or adjust how the **image styles look on a mobile screen context**, or if you want to modify any of the bulleted lists.
+</FollowUp>
+
+
