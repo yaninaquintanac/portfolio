@@ -203,6 +203,26 @@ section{padding:3.75rem 0}}
 .think .arch img{aspect-ratio:4/5;border-radius:999px 999px 0 0}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .arch::before{background:#1F3A34}}
 :root[data-theme="dark"] .arch::before{background:#1F3A34}
+.work-top{padding:4.5rem 0 3rem;border-bottom:1px solid var(--rule)}
+.work-top h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.08;letter-spacing:-.02em;max-width:20ch;margin:0 0 1.25rem}
+.wk-label,.wk-kind{font-size:.85rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.wk-label{margin:0 0 1rem}
+.wk{display:grid;grid-template-columns:13rem 1fr;gap:2.5rem;padding:3.5rem 0;border-bottom:1px solid var(--rule)}
+.wk-num{display:block;font-family:var(--serif);font-size:2.6rem;line-height:1;color:var(--accent);margin-bottom:.75rem}
+.wk-kind{margin:0}
+.wk-main{max-width:46rem}
+.wk h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,3vw,2.2rem);line-height:1.2;margin:0 0 .5rem}
+.wk-line{font-size:1.15rem;color:var(--muted);margin:0 0 1rem}
+.wk-tags{list-style:none;margin:0 0 1.75rem;padding:0;display:flex;flex-wrap:wrap;gap:.45rem}
+.wk-tags li{border:1px solid var(--rule);border-radius:999px;padding:.25rem .75rem;font-size:.85rem;color:var(--muted)}
+.wb{padding-left:1.25rem;border-left:4px solid var(--accent);margin-bottom:1.25rem}
+.wb h3{font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:0 0 .3rem}
+.wb p{margin:0;color:var(--muted);line-height:1.65}
+.wb p b{color:var(--ink);font-weight:600}
+.sample{display:inline-block;margin-top:.75rem;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--ink);padding-bottom:.15rem}
+.sample:hover{color:var(--accent);border-color:var(--accent)}
+@media (max-width:800px){.wk{grid-template-columns:1fr;gap:1rem}.wk-num{display:inline;font-size:2rem;margin-right:.75rem}.wk-side{display:flex;align-items:baseline}}
+.samples-note{padding:3.5rem 0 4.5rem}.sn-box{border-left:6px solid var(--accent);padding:.25rem 0 .25rem 1.75rem;max-width:46rem}.sn-box p:last-child{margin:0;color:var(--muted);font-size:1.05rem;line-height:1.7}
 </style>
 </head>
 <body>
@@ -214,56 +234,93 @@ section{padding:3.75rem 0}}
   </div>
 </header>
 <main id="main">
-
-<div class="page-head">
+<section class="work-top">
   <div class="wrap">
-    <p class="eyebrow">Work</p>
+    <p class="wk-label">Work examples</p>
     <h1>Learning that helps people adopt complex technology.</h1>
-    <p class="lede">Selected projects from seven years leading learning strategy and development at Appian, a global enterprise software company.</p>
-  </div>
-</div>
-<div class="wrap">
-<article class="proj" id="gen-ai">
-    <div class="side"><p class="kind">AI enablement</p><p class="fig">Early</p><p class="figl">generative AI learning at Appian</p></div>
-    <div><h2>Building generative AI learning from the ground up</h2><dl><dt>The challenge</dt><dd>Generative AI was a new area for Appian’s audiences, and there was no existing learning to build on.</dd><dt>What I did</dt><dd>Built Appian’s early generative AI learning programs from the ground up, translating an emerging technology into practical learning for developers, customers, partners, and internal teams. Created learning content supporting Appian’s AI partner sales accreditation, so sales and partner audiences could explain capabilities and use cases.</dd><dt>The result</dt><dd>A foundation for AI learning across four audiences, and content that supported partner accreditation.</dd></dl></div>
-  </article>
-<article class="proj" id="data-fabric">
-    <div class="side"><p class="kind">Platform learning strategy</p><p class="fig">4</p><p class="figl">audiences served by one curriculum</p></div>
-    <div><h2>Appian Data Fabric</h2><dl><dt>The challenge</dt><dd>A major platform capability needed to make sense to very different audiences, each with different goals.</dd><dt>What I did</dt><dd>Led the learning strategy for Appian Data Fabric and developed curriculum across developer, customer, partner, and internal audiences, partnering with Product, Engineering, and customer-facing teams.</dd></dl></div>
-  </article>
-<article class="proj" id="essentials">
-    <div class="side"><p class="kind">Developer education</p><p class="fig">52K+</p><p class="figl">video views in a single year</p></div>
-    <div><h2>Appian Essentials</h2><dl><dt>The challenge</dt><dd>The company’s most-trafficked developer course had to stay accurate and relevant while the platform kept changing.</dd><dt>The insight</dt><dd class="insight">A flagship course is a product, not a one-time project.</dd><dt>What I did</dt><dd>Owned the course’s ongoing strategy and evolution, regularly auditing and updating its content.</dd><dt>The result</dt><dd>Its video drew more than 52,000 views in a single year, and account executives adopted it for customer communications.</dd></dl></div>
-  </article>
-<article class="proj" id="youtube">
-    <div class="side"><p class="kind">Video and audience growth</p><p class="fig">300%</p><p class="figl">year-over-year growth in 2023</p></div>
-    <div><h2>Appian Community YouTube</h2><dl><dt>What I did</dt><dd>Helped launch the developer YouTube channel as a core team member, then led its content-growth strategy using YouTube SEO, audience analytics, social promotion, and content experiments.</dd><dt>The result</dt><dd>About 300% year-over-year growth in 2023 and 200% in 2024. I also trained colleagues on content optimization and audience-growth practices.</dd></dl></div>
-  </article>
-<article class="proj" id="process-intelligence">
-    <div class="side"><p class="kind">Employee enablement</p><p class="fig">100+</p><p class="figl">employees onboarded</p></div>
-    <div><h2>Process Intelligence workshops</h2><dl><dt>The challenge</dt><dd>Customer Success and Solution Consulting teams needed to be ready for a major product release.</dd><dt>What I did</dt><dd>Designed and launched a Process Intelligence workshop program, starting with a pilot and scaling it.</dd><dt>The result</dt><dd>The program onboarded more than 100 employees ahead of the release.</dd></dl></div>
-  </article>
-<article class="proj" id="migration">
-    <div class="side"><p class="kind">Project leadership</p><p class="fig">7</p><p class="figl">person team led</p></div>
-    <div><h2>Course portfolio migration</h2><dl><dt>What I did</dt><dd>Led a team of seven through the migration of Appian’s course portfolio from Absorb to Skilljar, managing project planning, team onboarding, migration workflows, and quality assurance.</dd><dt>The result</dt><dd>The full portfolio moved to the new platform, along with a scalable migration and testing procedure the team could reuse.</dd></dl></div>
-  </article>
-</div>
-<section>
-  <div class="wrap">
-    <div class="sec-head"><h2>More work</h2><p>Other projects across my career.</p></div>
-    <ul class="also">
-      <li><h3>Appian Portals adoption strategy</h3><p>Connected public video, structured learning, and in-product guidance into one adoption experience for a major launch.</p></li>
-      <li><h3>A learning ecosystem beyond courses</h3><p>Introduced hands-on developer exercises, Gainsight in-product learning, badging exams, and scalable instructor-led workshops at Appian.</p></li>
-      <li><h3>University curriculum pilot in Chennai</h3><p>Partnered with SSN University on a software-engineering curriculum and learning pilot connecting academic learning with practical technology skills.</p></li>
-      <li><h3>Customer FAQ redesign at Exostar</h3><p>Led the redesign of customer-facing FAQ resources, contributing to a 40% reduction in support calls.</p></li>
-    </ul>
+    <p class="lede">Selected projects from seven years leading learning strategy at Appian. Each one shows the problem, my role, and what changed, with links to published work where it’s public.</p>
   </div>
 </section>
+<div class="wrap">
+<article class="wk" id="gen-ai">
+    <div class="wk-side"><span class="wk-num">01</span><p class="wk-kind">AI enablement</p></div>
+    <div class="wk-main">
+      <h2>Appian’s first AI learning portfolio</h2>
+      <p class="wk-line">Turning a brand-new technology into practical learning for every audience.</p>
+      <ul class="wk-tags"><li>Generative AI</li><li>Partner enablement</li><li>Video</li><li>Curriculum design</li></ul>
+      <div class='wb'><h3>The challenge</h3><p>Generative AI was new to Appian’s developers, customers, partners, and internal teams, and there was no learning to build on.</p></div><div class='wb'><h3>My role</h3><p><b>Program creator.</b> Built Appian’s early AI learning programs from the ground up.</p></div><div class='wb'><h3>The work</h3><p>An AI video playlist curated with Customer Success from real customer questions, plus introductory AI courses for Partner Sales accreditation. I also introduced Amazon Kiro to streamline go-to-market and YouTube workflows.</p></div><div class='wb'><h3>The outcome</h3><p>A foundation for AI learning across four audiences, including content that supports partner sales accreditation.</p></div>
+      <a class='sample' href='https://academy.appian.com/path/appian-ai' target='_blank' rel='noopener'>Explore the AI learning path ↗</a>
+      
+    </div>
+  </article>
+<article class="wk" id="data-fabric">
+    <div class="wk-side"><span class="wk-num">02</span><p class="wk-kind">Flagship product training</p></div>
+    <div class="wk-main">
+      <h2>Appian Data Fabric</h2>
+      <p class="wk-line">Enterprise-scale curriculum for one of Appian’s flagship platform capabilities.</p>
+      <ul class="wk-tags"><li>Platform learning</li><li>Developer education</li><li>Curriculum design</li></ul>
+      <div class='wb'><h3>The challenge</h3><p>A major platform capability had to make sense to developers, customers, partners, and internal teams, each with different goals.</p></div><div class='wb'><h3>My role</h3><p><b>Training lead.</b> Owned the learning strategy for Data Fabric, and for Total Experience as well.</p></div><div class='wb'><h3>The work</h3><p>Designed curricula used by developers, customers, and partners worldwide, partnering with Product, Engineering, and customer-facing teams.</p></div>
+      <a class='sample' href='https://academy.appian.com/design-record-types-model-and-configure-your-data-1' target='_blank' rel='noopener'>Open the published course ↗</a>
+    </div>
+  </article>
+<article class="wk" id="essentials">
+    <div class="wk-side"><span class="wk-num">03</span><p class="wk-kind">Developer education</p></div>
+    <div class="wk-main">
+      <h2>Appian Essentials</h2>
+      <p class="wk-line">Ongoing strategy for the company’s most-trafficked developer learning course.</p>
+      <ul class="wk-tags"><li>Video</li><li>Content strategy</li><li>Sales enablement</li></ul>
+      <div class='wb'><h3>The challenge</h3><p>The front door for new developers had to stay accurate and relevant while the platform kept changing.</p></div><div class='wb'><h3>My role</h3><p><b>Content owner.</b> Owned the course’s ongoing strategy and evolution.</p></div><div class='wb'><h3>The work</h3><p>Regularly audited and updated the content, and shaped it around the questions audiences actually ask.</p></div><div class='wb'><h3>The outcome</h3><p>Its video drew more than 52,000 views in a single year, and account executives adopted it for customer communications.</p></div>
+      <a class='sample' href='https://www.youtube.com/watch?v=2p850iaNqvA' target='_blank' rel='noopener'>Watch the video ↗</a>
+    </div>
+  </article>
+<article class="wk" id="youtube">
+    <div class="wk-side"><span class="wk-num">04</span><p class="wk-kind">Content and audience growth</p></div>
+    <div class="wk-main">
+      <h2>Appian Community YouTube</h2>
+      <p class="wk-line">A content formula and SEO playbook that grew a developer channel.</p>
+      <ul class="wk-tags"><li>Video</li><li>YouTube SEO</li><li>Audience growth</li><li>Analytics</li></ul>
+      <div class='wb'><h3>The challenge</h3><p>A new developer channel needed content people would find, watch, and come back to.</p></div><div class='wb'><h3>My role</h3><p><b>Core launch team member, then growth lead.</b> Led the channel’s content-growth strategy.</p></div><div class='wb'><h3>The work</h3><p>Developed the content formula and proved it with the channel’s highest-performing videos, then created an SEO procedure and trained the team on scriptwriting and SEO.</p></div><div class='wb'><h3>The outcome</h3><p>Views and watch time grew about 300% in 2023 and 200% in 2024.</p></div>
+      <a class='sample' href='https://www.youtube.com/@AppianCommunity' target='_blank' rel='noopener'>Visit the channel ↗</a>
+    </div>
+  </article>
+<article class="wk" id="process-intelligence">
+    <div class="wk-side"><span class="wk-num">05</span><p class="wk-kind">Internal technical onboarding</p></div>
+    <div class="wk-main">
+      <h2>Process Intelligence workshops</h2>
+      <p class="wk-line">Getting customer-facing teams ready before a major release.</p>
+      <ul class="wk-tags"><li>Workshops</li><li>Employee enablement</li><li>Product launch</li></ul>
+      <div class='wb'><h3>The challenge</h3><p>Customer Success and Solution Consulting teams needed to be ready for a major product release.</p></div><div class='wb'><h3>My role</h3><p><b>Program designer.</b> Designed and launched the workshop program.</p></div><div class='wb'><h3>The outcome</h3><p>The program scaled from a pilot to onboarding more than 100 employees ahead of the release.</p></div>
+      
+    </div>
+  </article>
+<article class="wk" id="gtm">
+    <div class="wk-side"><span class="wk-num">06</span><p class="wk-kind">Marketing for education</p></div>
+    <div class="wk-main">
+      <h2>Marketing learning like a product</h2>
+      <p class="wk-line">Getting good learning in front of the people who need it.</p>
+      <ul class="wk-tags"><li>LinkedIn</li><li>Employee advocacy</li><li>Campaign strategy</li></ul>
+      <div class='wb'><h3>The challenge</h3><p>Good learning content only helps if people find it, and the team had never promoted its learning outside its own channels.</p></div><div class='wb'><h3>My role</h3><p><b>Initiator and strategist.</b> Proposed the approach and wrote the plans.</p></div><div class='wb'><h3>The work</h3><p>Started promoting the team’s educational initiatives through Sprout Social employee advocacy and developer LinkedIn groups. Then proposed and designed the first full marketing campaign for DevCon, Appian’s developer conference, which ran on LinkedIn in 2026.</p></div>
+      
+    </div>
+  </article>
+<article class="wk" id="migration">
+    <div class="wk-side"><span class="wk-num">07</span><p class="wk-kind">Project leadership</p></div>
+    <div class="wk-main">
+      <h2>Course portfolio migration</h2>
+      <p class="wk-line">Moving Appian’s full course portfolio to a new learning platform.</p>
+      <ul class="wk-tags"><li>Learning operations</li><li>Skilljar</li><li>Team leadership</li></ul>
+      <div class='wb'><h3>The challenge</h3><p>The entire course portfolio had to move from Absorb to Skilljar without disrupting learners.</p></div><div class='wb'><h3>My role</h3><p><b>Project lead.</b> Led a team of seven.</p></div><div class='wb'><h3>The work</h3><p>Managed project planning, team onboarding, migration workflows, and quality assurance, and developed a repeatable migration and testing procedure.</p></div>
+      <a class='sample' href='https://academy.appian.com/' target='_blank' rel='noopener'>Visit the new Appian Academy ↗</a>
+    </div>
+  </article>
+</div>
 
-<section class="cta">
+<section class="samples-note">
   <div class="wrap">
-    <h2>Have a learning problem worth solving?</h2>
-    <div class="btns"><a class="btn btn-solid" href="contact.html">Get in touch</a></div>
+    <div class="sn-box">
+      <p class="wk-label">About the samples</p>
+      <p>The links on this page lead to public resources I designed, blueprinted, or co-created at Appian, usually alongside talented colleagues across the company. Appian owns the associated content, intellectual property, and trademarks. I share them here simply as examples of my work.</p>
+    </div>
   </div>
 </section>
 </main>
