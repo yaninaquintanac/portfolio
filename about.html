@@ -10,13 +10,14 @@
   gtag('config', 'G-6KFP8NZQ0K');
 </script> 
 <meta charset="utf-8">
+<meta name="theme-color" content="#0C1F19">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>About | Yanina Quintana</title>
 <meta name="description" content="Yanina Quintana, learning and enablement strategist: learning strategy, AI enablement, and product education for complex technology.">
 <meta property="og:title" content="About | Yanina Quintana">
 <meta property="og:description" content="Yanina Quintana, learning and enablement strategist: learning strategy, AI enablement, and product education for complex technology.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;1,7..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>:root{--bg:#FFFFFF;--soft:#F4F6F5;--ink:#18222B;--muted:#56626C;--accent:#1F6B5C;--accent-2:#0F4F43;--rule:#E1E5E3;
 --serif:"Literata",Georgia,"Times New Roman",serif;--sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -246,6 +247,96 @@ section{padding:3.75rem 0}}
 .about-links a{color:var(--ink);font-weight:600;font-size:.95rem;text-decoration:none;border-bottom:1.5px solid var(--ink);padding-bottom:.15rem}
 .about-links a:hover{color:var(--accent);border-color:var(--accent)}
 .about-quote{border-left:6px solid var(--accent);padding:.2rem 0 .2rem 1.75rem;margin:2.5rem 0 0;font-size:clamp(1.5rem,2.8vw,2rem);color:var(--accent)}
+
+/* ===== Lovable-inspired theme: dark green, cream, lime ===== */
+:root,:root:not([data-theme="light"]),:root[data-theme="dark"]{
+  --bg:#FFFFFF;--soft:#F3F6F3;--card:#FFFFFF;--ink:#10231C;--muted:#4E5E56;
+  --accent:#256346;--accent-2:#1A4B34;--rule:#E2E7E3;--lime:#C8EC60;--lime-pale:#E6F4C2;--peach:#FBE1D5;
+  --night:#0C1F19;--night-2:#132A22;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root,:root:not([data-theme="light"]){
+  --bg:#FFFFFF;--soft:#F3F6F3;--card:#FFFFFF;--ink:#10231C;--muted:#4E5E56;
+  --accent:#256346;--accent-2:#1A4B34;--rule:#E2E7E3;}}
+body{font-family:var(--sans);background-color:var(--bg);color:var(--ink);
+  background-image:linear-gradient(rgba(16,35,28,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(16,35,28,.035) 1px,transparent 1px);
+  background-size:56px 56px}
+
+/* dark bands: header, page tops, recommendations, CTA, footer */
+.site-head,.hero-solo,.work-top,.page-head,.recs-dark,.cta,.site-foot{
+  --bg:#0C1F19;--soft:#132A22;--card:#132A22;--ink:#F6F8F4;--muted:#A3B3A7;
+  --accent:#C8EC60;--accent-2:#B5DA48;--rule:rgba(246,248,244,.13);
+  background-color:#0C1F19;color:#F6F8F4;
+  background-image:linear-gradient(rgba(246,248,244,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(246,248,244,.04) 1px,transparent 1px);
+  background-size:56px 56px;border-color:rgba(246,248,244,.13)}
+.site-head{background-color:rgba(12,31,25,.96);backdrop-filter:blur(8px);background-image:none;border-bottom:1px solid rgba(246,248,244,.1)}
+.site-head .brand{color:#F6F8F4}
+.site-head .mono{background:var(--lime);color:#0C1F19;font-family:var(--serif)}
+.site-head nav a{color:#B9C4BC;border-bottom:0}
+.site-head nav a:hover,.site-head nav a[aria-current]{color:#fff}
+.site-head nav a[aria-current]{font-weight:600}
+.site-head nav a[href="contact.html"]{border:1px solid rgba(246,248,244,.25);border-radius:999px;padding:.35rem .95rem;color:#F6F8F4}
+.site-head nav a[href="contact.html"]:hover{background:var(--lime);color:#0C1F19;border-color:var(--lime)}
+.site-foot{background-image:none}
+.site-foot a{color:#B9C4BC}
+
+/* type */
+h1,h2,h3,.statement,.serif{font-family:var(--serif)}
+h1{letter-spacing:-.025em}
+em.acc,h1 em,h2 em{font-family:var(--serif);font-style:italic;color:var(--accent)}
+.hero-solo h1,.work-top h1,.page-head h1{color:#F6F8F4}
+.lede{color:var(--muted)}
+
+/* monospace labels */
+.eyebrow,.leadin,.card-kicker,.kind,.wk-kind,.wk-label,.label,.wb h3,.channels small,.facts h3,.go,.rec figcaption b{
+  font-family:var(--mono) !important;font-style:normal !important;font-weight:500 !important;
+  font-size:.74rem !important;letter-spacing:.14em !important;text-transform:uppercase !important;color:var(--accent) !important}
+.go{letter-spacing:.08em !important}
+
+/* buttons */
+.btn{border-radius:999px;font-family:var(--sans)}
+.btn-solid{background:var(--lime);color:#0C1F19}
+.btn-solid:hover{background:#B5DA48}
+.btn-line{box-shadow:inset 0 0 0 1px var(--rule);color:var(--ink)}
+.more,.sample{color:var(--accent)}
+
+/* cards */
+.card,.think-card,.areas div{background:var(--card);border:1px solid var(--rule);border-radius:14px;box-shadow:0 10px 30px -18px rgba(12,31,25,.35)}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card{transition:transform .15s,border-color .15s}
+.card h3{font-family:var(--serif);font-weight:400}
+.think-card{border-radius:14px}
+
+/* pills */
+.wk-tags li,.chips li{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--lime-pale);color:#1E3A2B;border:0;border-radius:999px;padding:.3rem .75rem}
+.page-head .chips li,.work-top .chips li{background:rgba(200,236,96,.15);color:#E8F5C4}
+
+/* numbers */
+.stats b,.wk-num,.dolist .n,.steps li::before{font-family:var(--serif);font-weight:400}
+.stats b{color:var(--ink)}
+.stats div:first-child b,.stats div:nth-child(2) b{color:var(--accent)}
+
+/* section accents */
+.wb,.about-head,.about-quote,.sn-box,.hero-photo figcaption,.rec{border-left-color:var(--accent)}
+.hero-photo figcaption{color:#D8DFD9}
+.arch::before{background:#1F3A30 !important}
+section.soft{background:var(--soft)}
+
+/* recommendations */
+.recs-dark .recs-h{color:#F6F8F4}
+.recs-dark .rec{border-left-color:var(--lime)}
+.recs-dark .rec blockquote{color:#F6F8F4}
+.recs-dark .rec figcaption span{color:#A3B3A7}
+.recs-links a{color:var(--lime)}
+
+/* CTA */
+.cta h2{color:#F6F8F4}
+.stats{margin-top:3rem}
+.hero-solo{padding-bottom:5rem}
 </style>
 </head>
 <body>
